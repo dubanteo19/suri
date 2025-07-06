@@ -58,8 +58,7 @@ export const AboutSection = () => {
         <Title>What I can do</Title>
         <span className="text-sm">
           My technical skills which consist practices of Full-Stack Development,
-          Cloud Integration, Error Handling, Modern Web Technologies. Full Stack
-          Web Development
+          Error Handling, Modern Web Technologies. Full Stack Web Development
         </span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3 mt-4">

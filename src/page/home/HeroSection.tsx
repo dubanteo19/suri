@@ -39,7 +39,7 @@ export const HeroSection = () => {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 50,
+          duration: 30,
           ease: "linear",
         },
       },
@@ -50,7 +50,7 @@ export const HeroSection = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       id="hero"
-      className="flex flex-col space-y-2 items-center mt-4  overflow-hidden"
+      className="flex flex-col space-y-2 items-center mt-4  "
     >
       <motion.h1
         initial={{ y: -10, opacity: 0 }}
@@ -58,12 +58,10 @@ export const HeroSection = () => {
         transition={{ delay: 0.2 }}
         className="text-3xl md:text-5xl text-center"
       >
-        Crafting Digital Experiences
+        Building Meaningful Digital Solutions
       </motion.h1>
-      <h1 className="text-3xl md:text-5xl text-primary text-center  text-stroke-black text-stroke-2"
- 
-      >
-        from Concept to Code!
+      <h1 className="text-3xl md:text-5xl text-primary text-center  text-stroke-black text-stroke-2">
+        Where Ideas Meet Engineering!
       </h1>
       <motion.div
         variants={item}
@@ -87,23 +85,30 @@ export const HeroSection = () => {
         />
       </motion.div>
       <motion.div
-        className="  md:max-w-[520px] rounded-3xl  p-6 mt-10  md:mt-2
-        shadow-lg  transition-all duration-300 overflow-hidden"
+        className=" rounded-3xl  p-4 mt-10  md:mt-2
+          transition-all duration-300 flex justify-center max-w-[600px] "
       >
-        <p className="text-center text-[14px] leading-relaxed text-gray-700">
-          Hi,{" "}
-          <span className="bg-white p-[2px] font-bold">I am Du Thanh Minh</span>
-          . I am a soon-to-be graduate in Software Engineering who is passionate
-          about developing elegant and{" "}
-          <span className="bg-white p-[2px] font-bold">
-            efficient applications
+        <p className="text-gray-700 text-[15px] leading-relaxed  ">
+          Hi, I’m{" "}
+          <span className="bg-white px-1 font-bold text-primary">
+            Du Thanh Minh
+          </span>{" "}
+          — a
+          <span className="font-semibold text-primary">
+            {" "}
+            passionate full-stack developer
+          </span>{" "}
+          with a drive to create efficient, scalable solutions that solve
+          real-world problems. I strongly believe in writing{" "}
+          <span className="bg-yellow-100 px-1 font-semibold">
+            clean, maintainable code
           </span>
-          . With a strong foundation in full-stack development using Java Spring
-          Boot, ReactJS, and MySQL, I am committed to building scalable and
-          impactful software solutions.
+          and always prioritize{" "}
+          <span className="italic font-medium ">readability</span> over just
+          <span className="line-through mx-1">“working”</span> code.
         </p>
       </motion.div>
-      <div className="flex space-x-3 my-6">
+      <div className="flex gap-3 my-5">
         <AButton icon=<GithubIcon className="size-4" />>Github</AButton>
         <AButton
           className="bg-primary border-black border-2 text-black"
@@ -112,16 +117,16 @@ export const HeroSection = () => {
           See my works
         </AButton>
       </div>
-      <div className="whitespace-nowrap w-full mx-[-500px] bg-primary py-2">
+      <div className="   bg-primary py-2 overflow-hidden w-full">
         <motion.div
-          className="flex  space-x-4  text-black"
+          className="flex gap-4 whitespace-nowrap w-full"
           variants={marqueeVariants}
           animate="animate"
         >
-          {skills.map((skill) => (
-            <div className="flex items-center space-x-2" key={skill}>
-              <span className="inline-block ">{skill}</span>
-              <Sparkle size={18} />
+          {[...skills, ...skills].map((skill, i) => (
+            <div className="flex items-center gap-2 px-4" key={i}>
+              <span>{skill}</span>
+              <Sparkle size={16} />
             </div>
           ))}
         </motion.div>
