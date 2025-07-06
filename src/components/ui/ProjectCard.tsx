@@ -1,7 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import { type FC } from "react";
-import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ImageContainer } from "../common/ImageContainer";

@@ -2,8 +2,8 @@ import type { Project } from "@/components/ui/ProjectCard";
 
 type MiniProject = Omit<
   Project,
-  "features" | "image" | "imageUrls" | "period" | "role"
-> & { thumbnail: string };
+  "features" | "image" | "imageUrls" | "period" | "role" | "githubUrl"
+> & { thumbnail: string; githubUrl: string };
 export const miniProjects: MiniProject[] = [
   {
     id: 1,

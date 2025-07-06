@@ -90,7 +90,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Tài Liệu Xanh - Academic Document Sharing Platform",
-    period: "2025",
+    period: "2024",
     role: "Full Stack Developer",
     techStack: [
       TECH_STACKS.SPRING_BOOT,
