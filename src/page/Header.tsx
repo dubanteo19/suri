@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "Home", href: "#hero" },
+  { name: "Home", href: "/" },
   { name: "About", href: "#about" },
   { name: "Works", href: "#works" },
   { name: "Contact", href: "#contact" },
@@ -38,9 +38,9 @@ export const Header = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4  py-2 flex items-center justify-between">
+      <div className=" md:px-10 px-4  py-2 flex items-center justify-between w-full">
         <div className="flex gap-4 items-center">
-          <a href="#hero">
+          <a href="/">
             <ImageContainer src="/logo.png" className="size-10" />
           </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
