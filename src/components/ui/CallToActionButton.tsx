@@ -7,15 +7,18 @@ interface AButtonProps {
   className?: string;
   icon: ReactNode;
   children: ReactNode;
+  download?: boolean;
 }
 export const AButton: FC<AButtonProps> = ({
   href,
   className,
   children,
   icon,
+  download=false,
 }) => {
   return (
     <motion.a
+      download={download}
       href={href}
       initial={{ scale: 1 }}
       animate={{
@@ -32,7 +35,7 @@ export const AButton: FC<AButtonProps> = ({
       }}
       whileTap={{ scale: 0.9 }}
       className={cn(
-        "inline-flex bg-black  rounded py-1 px-2   text-white  gap-2 items-center justify-center",
+        "inline-flex bg-black  rounded py-1 px-2   text-white  gap-2 items-center justify-center cursor-pointer",
         className,
       )}
     >

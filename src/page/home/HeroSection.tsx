@@ -1,5 +1,6 @@
 import { GithubIcon } from "@/components/icons/github";
 import { AButton } from "@/components/ui/CallToActionButton";
+import { GITHUB } from "@/constants/constants";
 import { RocketIcon, Sparkle } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import Typewriter from "typewriter-effect";
@@ -85,7 +86,7 @@ export const HeroSection = () => {
         />
       </motion.div>
       <motion.div
-        className=" rounded-3xl  p-4 mt-10  md:mt-2
+        className=" rounded-3xl  p-4 mt-3  md:mt-2
           transition-all duration-300 flex justify-center max-w-[600px] "
       >
         <p className="text-gray-700 text-[15px] leading-relaxed  ">
@@ -109,8 +110,11 @@ export const HeroSection = () => {
         </p>
       </motion.div>
       <div className="flex gap-3 my-5">
-        <AButton icon=<GithubIcon className="size-4" />>Github</AButton>
+        <AButton href={GITHUB} icon=<GithubIcon className="size-4" />>
+          Github
+        </AButton>
         <AButton
+          href="#works"
           className="bg-primary border-black border-2 text-black"
           icon=<RocketIcon className="size-4" />
         >

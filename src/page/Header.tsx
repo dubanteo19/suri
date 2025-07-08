@@ -1,7 +1,11 @@
 import { ImageContainer } from "@/components/common/ImageContainer";
+import { GithubIcon } from "@/components/icons/github";
+import { AButton } from "@/components/ui/CallToActionButton";
+import { GITHUB } from "@/constants/constants";
 import { motion } from "framer-motion";
-import { Menu as MenuIcon, X } from "lucide-react";
+import { Menu as MenuIcon, PaperclipIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -34,23 +38,30 @@ export const Header = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between">
-        <a href="#hero">
-          <ImageContainer src="/logo.png" className="size-10" />
-        </a>
-        <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="hover:text-pink-500 transition-colors duration-200"
-            >
-              {item.name}
-            </a>
-          ))}
-        </nav>
-
-        {/* Mobile Menu Button */}
+      <div className="max-w-6xl mx-auto px-4  py-2 flex items-center justify-between">
+        <div className="flex gap-4 items-center">
+          <a href="#hero">
+            <ImageContainer src="/logo.png" className="size-10" />
+          </a>
+          <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="hover:text-primary transition-colors duration-200"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <Link
+          className="  bg-primary hidden md:inline-flex border-black border-2 text-black  rounded 1 px-2     gap-2 items-center justify-center cursor-pointer"
+          to={"/resume"}
+        >
+          Resume
+          <PaperclipIcon />
+        </Link>
         <button
           className="md:hidden text-gray-700"
           onClick={() => setIsOpen(!isOpen)}
@@ -72,12 +83,24 @@ export const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="hover:text-pink-500 transition-colors duration-200"
+                className="hover:text-primary transition-colors duration-200 font-bold"
               >
                 {item.name}
               </a>
             ))}
           </nav>
+          <div className="flex justify-center my-2 items-center gap-2">
+            <Link
+              className="  bg-primary  inline-flex border-black border-2 text-black  rounded 1 px-2     gap-2 items-center justify-center cursor-pointer"
+              to={"/resume"}
+            >
+              Resume
+              <PaperclipIcon />
+            </Link>
+            <AButton href={GITHUB} icon=<GithubIcon className="size-4" />>
+              Github
+            </AButton>
+          </div>
         </motion.div>
       )}
     </header>

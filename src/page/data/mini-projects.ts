@@ -22,8 +22,8 @@ export const miniProjects: MiniProject[] = [
       "A fantasy-themed Ping Pong game that combines classic brick-breaking gameplay with RPG adventure elements. Players take on the role of a warrior battling through challenging levels to ultimately defeat the Dark Dragon. Developed using HTML, CSS, JavaScript, jQuery, and Canvas API.",
     techStack: ["HTML", "CSS", "JavaScript", "jQuery", "Canvas"],
     thumbnail: "/projects/mini/pic2.png",
-    githubUrl: "https://github.com/your-username/adventure-ping-pong",
-    liveUrl: "https://your-live-demo-url.com/adventure-ping-pong",
+    githubUrl: "https://github.com/dubanteo19/Adventure-Ping-Pong",
+    liveUrl: "https://dubanteo19.github.io/Adventure-Ping-Pong/",
   },
   {
     id: 3,

@@ -1,5 +1,6 @@
 import { GithubIcon } from "@/components/icons/github";
 import { AButton } from "@/components/ui/CallToActionButton";
+import { GITHUB } from "@/constants/constants";
 import { ArrowRightIcon, GridIcon, RocketIcon } from "lucide-react";
 
 export const Footer = () => {
@@ -15,12 +16,14 @@ export const Footer = () => {
         <div className="flex flex-col">
           <div className="grid grid-cols-2 gap-8 ">
             <AButton
+              href={GITHUB}
               className="border-white border"
               icon=<GithubIcon className="size-4 " />
             >
               Github
             </AButton>
             <AButton
+              href="#works"
               className="bg-primary border-black border-2 text-black "
               icon=<RocketIcon className="size-4" />
             >
@@ -53,7 +56,7 @@ export const Footer = () => {
       </div>
       <div className="border-t-white border-t-1 my-8">
         <p className="text-xs mt-2">
-          Copyright (c) 2025 Du Ban Teo. All Rights Reserved.
+          Copyright (c) 2025 Du Thanh Minh. All Rights Reserved.
         </p>
       </div>
     </div>

@@ -58,8 +58,8 @@ export const projects: Project[] = [
       TECH_STACKS.REDUX,
       TECH_STACKS.JWT,
     ],
-    description:
-      "A feature-rich e-commerce platform for essential oils built with Spring Boot and React. Supports advanced product browsing, filtering, user interaction, and a full order management system with real-time updates and role-based access.",
+    description: `A full-stack web app built with Spring Boot and ReactJS. Supports product browsing with filters and pagination, cart and wishlist
+management, product ratings with replies, and secure checkout via MoMo and VNPay. Features JWT-based authentication with role-based access (Customer, Employee, Admin), an admin dashboard for managing products, orders, employees and revenue stats. Includes real-time order notifications via WebSocket.`,
     imageUrls: [
       "/projects/annhien/pic1.png",
       "/projects/annhien/pic2.png",

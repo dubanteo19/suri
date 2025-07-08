@@ -25,6 +25,4 @@ export const ADMIN_ROUTES = Object.freeze({
   MANAGE_IMAGE: "/haryle/images",
   MANAGE_CONTACT: "/haryle/contact",
 });
-
-export const AVATAR =
-  "https://cdn.beacons.ai/user_content/gqU47xv5rmd9VjSco893Suvjnqg1/profile_bachthao114.png?t=1697446690247";
+export const GITHUB = "https://github.com/dubanteo19"
