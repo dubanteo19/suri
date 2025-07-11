@@ -5,15 +5,14 @@ type MiniProject = Omit<
   "features" | "image" | "imageUrls" | "period" | "role" | "githubUrl"
 > & { thumbnail: string; githubUrl: string };
 export const miniProjects: MiniProject[] = [
-  {
+    {
     id: 1,
-    title: "3D Heart Particles",
-    description: `A mesmerizing 3D heart particle animation built with React, TypeScript, Three.js, and Vite. This project creates an interactive scene with heart-shaped particles, background music, and customizable floating text.`,
-    techStack: ["React", "Typescript", "ThreeJs", "Vite"],
-    thumbnail:
-      "https://github.com/dubanteo19/3d-heart/raw/main/public/screenshots/pic1.png",
-    githubUrl: "https://github.com/dubanteo19/3d-heart",
-    liveUrl: "https://love.dbt19.store/",
+    title: "Thay lời muốn nói - QR Tình Yêu",
+    description: `Create a romantic QR code message with background music and stunning visual effects. This project allows users to customize a love message, choose a song, and generate a fantasy-style result page with floating 3D text and heart bloom particles. The experience includes music preview, real-time QR code decoration, and a beautiful animated scene for sharing love.`,
+    techStack: ["React", "TypeScript", "Three.js", "Vite"],
+    thumbnail: "/projects/mini/pic1.png", 
+    githubUrl: "https://github.com/dubanteo19/qr-love", 
+    liveUrl: "https://qrlove.dbt19.store",
   },
   {
     id: 2,
