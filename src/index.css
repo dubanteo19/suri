@@ -49,8 +49,8 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.8541 0.16 86.99);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.9338 0.04 56.33);
+  --primary-foreground: oklch(0.5279 0.2046 259.13);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -141,15 +141,7 @@
   h6 {
     @apply text-base font-medium;
   }
-  ::selection {
-    @apply bg-primary text-black;
-  }
 }
 html {
   scroll-behavior: smooth;
-}
-@utility text-stroke-* {
-  -webkit-text-stroke-width: calc(--value(integer) * 1px);
-  -webkit-text-stroke-color: --value(--color- *);
-  -webkit-text-stroke-color: --value([ *]);
 }

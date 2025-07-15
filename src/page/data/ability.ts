@@ -6,29 +6,28 @@ export interface Ability {
 }
 export const abilities: Ability[] = [
   {
-    text: "Full Stack Web Development",
-    imageSrc: "/abilities/fullstack.png",
+    text: "Behavior Management",
+    imageSrc: "/abilities/pic1.avif",
     description:
-      "Experience in building complete web applications from frontend to backend using modern frameworks and technologies.",
+      "Applying positive strategies to support students with behavioral challenges.",
   },
   {
-    text: "Communication Proficiency",
+    text: "Assistive Technology",
     imageSrc: "/abilities/comunication.jpg",
     background: "white",
     description:
-      "Strong verbal and written communication skills for effective collaboration with team members and stakeholders.",
+      "Using tools like text-to-speech and learning apps to aid student success",
   },
   {
-    text: "Problem Solving",
+    text: "Companionship",
     imageSrc: "/abilities/problem-solving.jpg",
     background: "white",
     description:
-      "Able to identify, analyze, and solve complex problems efficiently.",
+      "Building strong client relationships with empathy and patience.",
   },
   {
-    text: "DevOps & System Administration",
+    text: "Certifications",
     imageSrc: "/abilities/linux.jpeg",
-    description:
-      "Proficient in Linux system operations, deploying web applications, configuring server",
+    description: "CPR and First Aid certified and Driving license",
   },
 ];

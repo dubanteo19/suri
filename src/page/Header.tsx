@@ -1,17 +1,15 @@
-import { ImageContainer } from "@/components/common/ImageContainer";
-import { GithubIcon } from "@/components/icons/github";
-import { AButton } from "@/components/ui/CallToActionButton";
-import { GITHUB } from "@/constants/constants";
 import { motion } from "framer-motion";
-import { Menu as MenuIcon, PaperclipIcon, X } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Works", href: "#works" },
-  { name: "Contact", href: "#contact" },
+  { name: "INTRODUCTION", href: "/" },
+  { name: "TEACHING PHILOSOPHY", href: "#about" },
+  { name: "COVER LETTER", href: "#works" },
+  { name: "REFERENCE LETTER", href: "#works" },
+  { name: "RESUME", href: "#works" },
+  { name: "CERTIFICATE", href: "#works" },
+  { name: "PROJECTS", href: "#works" },
 ];
 
 export const Header = () => {
@@ -34,15 +32,12 @@ export const Header = () => {
   }, [lastScrollY]);
   return (
     <header
-      className={` fixed top-0 left-0 w-full z-50 bg-white transition-transform duration-300 shadow ${
+      className={` fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 shadow ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className=" md:px-10 px-4  py-2 flex items-center justify-between w-full">
+      <div className=" md:px-20 px-4  py-4 flex items-center justify-between w-full">
         <div className="flex gap-4 items-center">
-          <a href="/">
-            <ImageContainer src="/logo.png" className="size-10" />
-          </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
             {navItems.map((item) => (
               <a
@@ -55,13 +50,6 @@ export const Header = () => {
             ))}
           </nav>
         </div>
-        <Link
-          className="  bg-primary hidden md:inline-flex border-black border-2 text-black  rounded 1 px-2     gap-2 items-center justify-center cursor-pointer"
-          to={"/resume"}
-        >
-          Resume
-          <PaperclipIcon />
-        </Link>
         <button
           className="md:hidden text-gray-700"
           onClick={() => setIsOpen(!isOpen)}
@@ -89,18 +77,6 @@ export const Header = () => {
               </a>
             ))}
           </nav>
-          <div className="flex justify-center my-2 items-center gap-2">
-            <Link
-              className="  bg-primary  inline-flex border-black border-2 text-black  rounded 1 px-2     gap-2 items-center justify-center cursor-pointer"
-              to={"/resume"}
-            >
-              Resume
-              <PaperclipIcon />
-            </Link>
-            <AButton href={GITHUB} icon=<GithubIcon className="size-4" />>
-              Github
-            </AButton>
-          </div>
         </motion.div>
       )}
     </header>

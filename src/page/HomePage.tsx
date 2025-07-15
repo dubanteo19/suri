@@ -1,19 +1,17 @@
 import { useEffect } from "react";
-import { AboutSection } from "./home/AboutSection";
-import { ContactSection } from "./home/ContactSection";
+import { AbilitiesSection } from "./home/AbilitiesSection";
 import { HeroSection } from "./home/HeroSection";
-import WorksSection from "./home/WorksSection";
+import { ImagesSection } from "./home/ImagesSection";
 
 export const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
+    <div className="px-2">
       <HeroSection />
-      <AboutSection />
-      <WorksSection />
-      <ContactSection />
+      <AbilitiesSection />
+      <ImagesSection />
     </div>
   );
 };
