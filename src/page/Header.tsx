@@ -71,7 +71,7 @@ export const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          className="md:hidden bg-white shadow-md border-t border-pink-100"
+          className="md:hidden bg-white shadow-md border-t "
         >
           <nav className="flex flex-col px-6 py-4 gap-4 text-gray-700">
             {navItems.map((item) => (

@@ -3,6 +3,6 @@ export const USER_ROUTES = Object.freeze({
   COVER_LETTER: "cover-letter",
   REFERENCE_LETTER: "reference-letter",
   CERTIFICATE: "certificate",
-  PROJECTS: "projects",
+  PROJECTS: "my-projects",
   RESUME: "resume",
 });

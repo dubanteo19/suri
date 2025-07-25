@@ -13,20 +13,20 @@ const experiences = [
 
 const MyExperience = () => {
   return (
-    <div className=" mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+    <div className=" mx-auto px-6 py-12 ">
+      <h2 className="text-xl md:text-3xl font-bold text-center text-gray-800 mb-12">
         My Experience So Far
       </h2>
-      <div className="relative flex items-center justify-between">
+      <div className="relative flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between">
         {/* Horizontal line */}
-        <div className="absolute top-1/2 left-0 w-full h-1 bg-blue-200 z-0"></div>
+        <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-blue-200 z-0"></div>
         {experiences.map((exp, index) => (
           <div
             key={index}
             className="relative z-10 flex flex-col   items-center  w-1/2"
           >
             {/* Stone dot */}
-            <div className="w-5 h-5 bg-primary-foreground rounded-full border-4 border-white shadow-lg mb-4"></div>
+            <div className="hidden md:block size-5 bg-primary-foreground rounded-full border-4 border-white shadow-lg mb-4"></div>
 
             {/* Info box */}
             <div className="bg-white p-4 rounded-xl shadow-md text-center w-80">
