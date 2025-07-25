@@ -7,7 +7,7 @@ export const ProjectsPage = () => {
         <h2>PROJECT 1</h2>
         <ImageContainer
           src="/projects/project1.avif"
-          className="w-[500px]"
+          className=" md:w-[500px]"
         />
         <h3 className="font-semibold my-5">Introduction:</h3>
         <p>

@@ -16,12 +16,6 @@ export const Footer = () => {
   ];
   return (
     <div className="bg-primary  text-foreground md:-mx-4 px-8 mt-4">
-      <div className="flex gap-2 justify-center  py-6 w-full underline underline-offset-4">
-        <a href="#hero">Experise</a>
-        <a href="#skills">Skills</a>
-        <a href="#works">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
       <div className="border-t-white border-t-1 ">
         <h1 className="text-center font-semibold text-4xl md:text-6xl py-8">
           THI SUU LEE
