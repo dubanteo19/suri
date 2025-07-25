@@ -1,4 +1,5 @@
 import { ImageContainer } from "@/components/common/ImageContainer";
+import { SkillsMaqueer } from "@/components/ui/SkillsMaqueer";
 import { motion } from "motion/react";
 
 export const HeroSection = () => {
@@ -51,6 +52,7 @@ export const HeroSection = () => {
           supporting young learners on their educational journeys.
         </p>
       </motion.div>
+      <SkillsMaqueer />
     </motion.div>
   );
 };

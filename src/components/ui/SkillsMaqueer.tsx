@@ -3,30 +3,12 @@ import { motion, type Variants } from "motion/react";
 
 export const SkillsMaqueer = () => {
   const skills: string[] = [
-    "Git",
-    "GitHub",
-    "Neovim",
-    "Java",
-    "OOP",
-    "Data Structures",
-    "Design Patterns",
-    "Spring Boot",
-    "REST API",
-    "MySQL",
-    "JWT",
-    "Docker",
-    "WebSocket",
-    "Javascript",
-    "Typescript",
-    "HTML & CSS",
-    "TailwindCSS",
-    "ReactJS",
-    "Responsive Design",
-    "Redux",
-    "Redux Toolkit (RTK)",
-    "Linux",
-    "CI/CD",
-    "Networking",
+    "Behavior Management",
+    "Assistive Technology",
+    "Companionship",
+    "CPR",
+    "Aid certified",
+    "Driving license",
   ];
   const marqueeVariants: Variants = {
     animate: {

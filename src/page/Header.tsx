@@ -1,15 +1,18 @@
+import { USER_ROUTES } from "@/constants/constants";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Menu as MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "INTRODUCTION", href: "/" },
-  { name: "TEACHING PHILOSOPHY", href: "#about" },
-  { name: "COVER LETTER", href: "#works" },
-  { name: "REFERENCE LETTER", href: "#works" },
-  { name: "RESUME", href: "#works" },
-  { name: "CERTIFICATE", href: "#works" },
-  { name: "PROJECTS", href: "#works" },
+  { name: "TEACHING PHILOSOPHY", href: USER_ROUTES.PHILOSOPHY },
+  { name: "COVER LETTER", href: USER_ROUTES.COVER_LETTER },
+  { name: "REFERENCE LETTER", href: USER_ROUTES.REFERENCE_LETTER },
+  { name: "RESUME", href: USER_ROUTES.RESUME },
+  { name: "CERTIFICATE", href: USER_ROUTES.CERTIFICATE },
+  { name: "PROJECTS", href: USER_ROUTES.PROJECTS },
 ];
 
 export const Header = () => {
@@ -30,6 +33,7 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+  const { pathname } = useLocation();
   return (
     <header
       className={` fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 shadow ${
@@ -43,7 +47,11 @@ export const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:text-primary transition-colors duration-200"
+                className={cn(
+                  "hover:text-primary-foreground transition-colors duration-200 ",
+                  pathname.substring(1).startsWith(item.href) &&
+                    "text-primary-foreground",
+                )}
               >
                 {item.name}
               </a>
