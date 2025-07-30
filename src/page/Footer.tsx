@@ -18,7 +18,7 @@ export const Footer = () => {
     <div className="bg-primary  text-foreground md:-mx-4 px-8 mt-4">
       <div className="border-t-white border-t-1 ">
         <h1 className="text-center font-semibold text-4xl md:text-6xl py-8">
-          THI SUU LEE
+          THI SUU LE
         </h1>
         <div className="text-center">
           <h3>266.961.4852</h3>
