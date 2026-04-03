@@ -10,7 +10,7 @@ export const HomePage = () => {
   return (
     <div className="px-2">
       <HeroSection />
-      <MyExperience/>
+      <MyExperience />
       <ImagesSection />
     </div>
   );

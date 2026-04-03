@@ -4,6 +4,7 @@ import { CertificatePage } from "@/page/CertificatePage";
 import { CoverLetterPage } from "@/page/CoverLetterPage";
 import { HomePage } from "@/page/HomePage";
 import { PhilosophyPage } from "@/page/PhilosophyPage";
+import ProjectDetail from "@/page/projects/project-detail";
 import { ProjectsPage } from "@/page/ProjectsPage";
 import { ReferenceLetterPage } from "@/page/ReferenceLetterPage";
 import { ResumePage } from "@/page/ResumePage";
@@ -19,6 +20,12 @@ export const userRoutes: RouteObject = {
     { path: USER_ROUTES.CERTIFICATE, element: <CertificatePage /> },
     { path: USER_ROUTES.COVER_LETTER, element: <CoverLetterPage /> },
     { path: USER_ROUTES.REFERENCE_LETTER, element: <ReferenceLetterPage /> },
-    { path: USER_ROUTES.PROJECTS, element: <ProjectsPage /> },
+    {
+      path: USER_ROUTES.PROJECTS,
+      children: [
+        { index: true, element: <ProjectsPage /> },
+        { path: ":id", element: <ProjectDetail /> },
+      ],
+    },
   ],
 };

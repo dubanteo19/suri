@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Menu as MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "INTRODUCTION", href: "/" },
@@ -44,9 +44,9 @@ export const Header = () => {
         <div className="flex gap-4 items-center">
           <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={cn(
                   "hover:text-primary-foreground transition-colors duration-200 ",
                   pathname.substring(1).startsWith(item.href) &&
@@ -54,7 +54,7 @@ export const Header = () => {
                 )}
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </nav>
         </div>
@@ -75,14 +75,14 @@ export const Header = () => {
         >
           <nav className="flex flex-col px-6 py-4 gap-4 text-gray-700">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsOpen(false)}
                 className="hover:text-primary transition-colors duration-200 font-bold"
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </nav>
         </motion.div>
