@@ -2,7 +2,7 @@ import { ImageContainer } from "@/components/common/ImageContainer";
 export const Project1 = () => {
   return (
     <div className="w-full max-w-[800px] bg-primary border rounded py-5 mt-5 px-5 text-[17px] leading-relaxed">
-      <h2>PROJECT 1: PRESCHOOL CLASSROOM DESIGN MODEL</h2>
+      <h2>PROJECT Preschool Classroom Design Model</h2>
       <ImageContainer src="/projects/project1.avif" className=" md:w-[500px]" />
       <h3 className="font-semibold my-5">Introduction:</h3>
       <p>
