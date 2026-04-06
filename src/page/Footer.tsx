@@ -21,7 +21,7 @@ export const Footer = () => {
           THI SUU LE
         </h1>
         <div className="text-center">
-          <h3>266.961.4852</h3>
+          <h3>548 3324087</h3>
           <h3>surihuynh012@gmail.com</h3>
         </div>
       </div>
