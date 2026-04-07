@@ -6,7 +6,8 @@ export const ResumePage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState<number>(600);
   useEffect(() => {
-    const resize = () => { if (containerRef.current) {
+    const resize = () => {
+      if (containerRef.current) {
         setWidth(containerRef.current.offsetWidth);
       }
     };
